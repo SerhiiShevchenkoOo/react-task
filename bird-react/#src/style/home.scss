@@ -1,0 +1,107 @@
+//====================================================================================================
+.background {
+	z-index: -2;
+	background: url("./../assets/image/foreground.png") 5% 5%, url("./../assets/image/midground.png") 50% 50%,
+		url("./../assets/image/background.png") 90% 110%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	-webkit-transition: left 300s linear;
+	-moz-transition: left 300s linear;
+	-o-transition: left 300s linear;
+	-ms-transition: left 300s linear;
+	transition: left 300s linear;
+}
+
+.main:target .background {
+	left: -5000px;
+}
+
+.main:hover .background {
+	left: -9999px;
+}
+
+@keyframes colorPulse {
+	0%,
+	100% {
+		border-color: #0c0;
+	}
+	48%,
+	52% {
+		border-color: #090;
+	}
+	50% {
+		border-color: #060;
+	}
+}
+@keyframes colorP {
+	0%,
+	100% {
+		color: #0c0;
+	}
+	48%,
+	52% {
+		color: #090;
+	}
+	50% {
+		color: #060;
+	}
+}
+@keyframes wave {
+	0% {
+		z-index: -1;
+		box-shadow: 0 -10vh 20vh #0c0;
+		top: -100%;
+	}
+	48%,
+	52% {
+		box-shadow: 0 -10vh 20vh #090;
+		z-index: -1;
+	}
+	50% {
+		box-shadow: 0 -10vh 20vh #060;
+		z-index: -1;
+	}
+	100% {
+		box-shadow: 0 -10vh 20vh #0c0;
+		top: 200%;
+		z-index: -1;
+	}
+}
+@keyframes pulse {
+	0%,
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	48%,
+	52% {
+		transform: scale(0.9);
+		opacity: 0.5;
+	}
+	50% {
+		transform: scale(0.85);
+		opacity: 1;
+	}
+}
+@keyframes colorBlink {
+	0% {
+		opacity: 1;
+	}
+
+	25% {
+		opacity: 0;
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+//====================================================================================================

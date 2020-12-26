@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body{
+	height: 100%;
+	width: 100%;
+}
+
+@layer components{
+.card{
+	@apply w-40 h-10 flex justify-center items-center
+}
+.info{
+	@apply w-full flex-auto h-full justify-start pl-7	flex items-center
+}
+}
